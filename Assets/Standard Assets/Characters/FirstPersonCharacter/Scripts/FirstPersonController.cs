@@ -6,8 +6,8 @@ using Random = UnityEngine.Random;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
-    [RequireComponent(typeof(CharacterController))]
-    [RequireComponent(typeof(AudioSource))]
+    [RequireComponent(typeof (CharacterController))]
+    [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
         [SerializeField] private bool m_IsWalking;
@@ -27,8 +27,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+        [SerializeField] private bool isInvertedPlayer;
 
-        private Camera m_Camera;
+        public Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
         private Vector2 m_Input;
@@ -41,18 +42,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
-
-        public MouseLook M_MouseLook { get { return m_MouseLook; } }
         public bool canMove;
 
-        public enum GravityState { Normal, UpSideDown};
-        public GravityState gravityState;
+        public MouseLook M_MouseLook { get { return m_MouseLook; } }
 
         // Use this for initialization
         private void Start()
         {
             m_CharacterController = GetComponent<CharacterController>();
-            m_Camera = Camera.main;
+            //m_Camera = Camera.main;
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
             m_FovKick.Setup(m_Camera);
             m_HeadBob.Setup(m_Camera, m_StepInterval);
@@ -60,7 +58,26 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_NextStep = m_StepCycle/2f;
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
+            //if(!isInvertedPlayer)
 			m_MouseLook.Init(transform , m_Camera.transform);
+            GameObject klin_obj = GameObject.Find("KilnDisplayManager");
+            if (klin_obj != null)
+                m_MouseLook.kilnDisplayManager = klin_obj;
+        }
+
+        public void ActivatePlayer ()
+        {
+            canMove = true;
+            m_MouseLook.canLook = true;
+            m_MouseLook.SetCursorLock(true);
+        }
+
+        public void DeActivatePlayer()
+        {
+            canMove = false;
+            m_MouseLook.canLook = false;
+            if(OleoInputManager.instance.iNPUT_TYPE != OleoInputManager.INPUT_TYPE.Joystick)
+                m_MouseLook.SetCursorLock(false);
         }
 
 
@@ -71,11 +88,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             if (!canMove)
                 return;
+            
 
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+                //m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
@@ -91,19 +109,23 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+            CharacterUpdate();
         }
 
 
         private void PlayLandingSound()
         {
             m_AudioSource.clip = m_LandSound;
-            m_AudioSource.Play();
+            //m_AudioSource.Play();
             m_NextStep = m_StepCycle + .5f;
         }
 
 
-        private void FixedUpdate()
+        private void CharacterUpdate()
         {
+            if (!canMove)
+                return;
+
             float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
@@ -111,9 +133,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             // get a normal for the surface that is being touched to move along it
             RaycastHit hitInfo;
-            Physics.SphereCast(transform.position, m_CharacterController.radius, Vector3.up, out hitInfo,
+            Physics.SphereCast(transform.position, m_CharacterController.radius, Vector3.down, out hitInfo,
                                m_CharacterController.height/2f, Physics.AllLayers, QueryTriggerInteraction.Ignore);
-            desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
+            
+            //desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;  (nothke change)
+            desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal);
+            desiredMove = Vector3.ClampMagnitude(desiredMove, 1);
 
             m_MoveDir.x = desiredMove.x*speed;
             m_MoveDir.z = desiredMove.z*speed;
@@ -121,11 +146,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             if (m_CharacterController.isGrounded)
             {
-                m_MoveDir.y = m_StickToGroundForce;
+                m_MoveDir.y = -m_StickToGroundForce;
 
                 if (m_Jump)
                 {
-                    m_MoveDir.y = -m_JumpSpeed;
+                    m_MoveDir.y = m_JumpSpeed;
                     PlayJumpSound();
                     m_Jump = false;
                     m_Jumping = true;
@@ -133,11 +158,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-                m_MoveDir += Vector3.down * m_GravityMultiplier * Time.fixedDeltaTime; ;// Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
+                m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.deltaTime;
+            }
+            
+            if (isInvertedPlayer)
+            {
+                if ((Mathf.Abs(CrossPlatformInputManager.GetAxis("Vertical")) > 0 || Mathf.Abs(CrossPlatformInputManager.GetAxis("Horizontal")) > 0))
+                {
+                    m_CollisionFlags = m_CharacterController.Move(m_MoveDir * Time.deltaTime);
+                }
+            }
+            else
+            {
+                m_CollisionFlags = m_CharacterController.Move(m_MoveDir * Time.deltaTime);
             }
 
-            if(Mathf.Abs(CrossPlatformInputManager.GetAxis("Vertical")) > 0 || Mathf.Abs(CrossPlatformInputManager.GetAxis("Horizontal")) > 0)
-                m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
+
 
             ProgressStepCycle(speed);
             //UpdateCameraPosition(speed);
@@ -145,18 +181,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MouseLook.UpdateCursorLock();
         }
 
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.red;
-            Debug.DrawLine(transform.position, transform.position + Vector3.up);
-            Gizmos.DrawWireSphere(transform.position + Vector3.up, 0.5f);
-        }
-
 
         private void PlayJumpSound()
         {
             m_AudioSource.clip = m_JumpSound;
-            m_AudioSource.Play();
+            //m_AudioSource.Play();
         }
 
 
@@ -165,7 +194,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (m_CharacterController.velocity.sqrMagnitude > 0 && (m_Input.x != 0 || m_Input.y != 0))
             {
                 m_StepCycle += (m_CharacterController.velocity.magnitude + (speed*(m_IsWalking ? 1f : m_RunstepLenghten)))*
-                             Time.fixedDeltaTime;
+                             Time.deltaTime;
             }
 
             if (!(m_StepCycle > m_NextStep))
@@ -189,7 +218,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // excluding sound at index 0
             int n = Random.Range(1, m_FootstepSounds.Length);
             m_AudioSource.clip = m_FootstepSounds[n];
-            m_AudioSource.PlayOneShot(m_AudioSource.clip);
+            //m_AudioSource.PlayOneShot(m_AudioSource.clip);
             // move picked sound to index 0 so it's not picked next time
             m_FootstepSounds[n] = m_FootstepSounds[0];
             m_FootstepSounds[0] = m_AudioSource.clip;
@@ -219,13 +248,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Camera.transform.localPosition = newCameraPosition;
         }
 
+        public MotionDetection motionDetection;
 
         private void GetInput(out float speed)
         {
             // Read input
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
-
+            if(motionDetection != null && motionDetection.gameObject.activeSelf && OleoInputManager.instance.iNPUT_TYPE == OleoInputManager.INPUT_TYPE.Leapmotion)
+            {
+                //horizontal = motionDetection.GetAxis("Horizontal");
+                vertical = motionDetection.GetAxis("Vertical");
+            }
             bool waswalking = m_IsWalking;
 
 #if !MOBILE_INPUT

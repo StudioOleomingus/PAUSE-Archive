@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: 2cbff68b5a12d0b4d95521bb32ab3710
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Group_001
+    100002: Group_002
+    100004: Group_003
+    100006: Group_004
+    100008: Group_005
+    100010: Group_006
+    100012: Group_007
+    100014: Group_008
+    100016: Group_009
+    100018: Group_010
+    100020: Group_011
+    100022: Group_012
+    100024: Group_013
+    100026: Group_014
+    100028: Phone_final_top_Plane.014_001
+    100030: //RootNode
+    100032: Telephone_receiver_highpoly_right_Sphere.001_001
+    400000: Group_001
+    400002: Group_002
+    400004: Group_003
+    400006: Group_004
+    400008: Group_005
+    400010: Group_006
+    400012: Group_007
+    400014: Group_008
+    400016: Group_009
+    400018: Group_010
+    400020: Group_011
+    400022: Group_012
+    400024: Group_013
+    400026: Group_014
+    400028: Phone_final_top_Plane.014_001
+    400030: //RootNode
+    400032: Telephone_receiver_highpoly_right_Sphere.001_001
+    2100000: Free Passage08
+    2100002: 01PaintingEdge
+    2100004: WallRedChecks01
+    2100006: skp_front_default
+    2100008: BambooBlind05
+    2100010: 01ClockDetail
+    2100012: 02Telephone Detail
+    2100014: Tapertry02
+    2300000: Group_001
+    2300002: Group_002
+    2300004: Group_003
+    2300006: Group_004
+    2300008: Group_005
+    2300010: Group_006
+    2300012: Group_007
+    2300014: Group_008
+    2300016: Group_009
+    2300018: Group_010
+    2300020: Group_011
+    2300022: Group_012
+    2300024: Group_013
+    2300026: Group_014
+    2300028: Phone_final_top_Plane.014_001
+    2300030: Telephone_receiver_highpoly_right_Sphere.001_001
+    3300000: Group_001
+    3300002: Group_002
+    3300004: Group_003
+    3300006: Group_004
+    3300008: Group_005
+    3300010: Group_006
+    3300012: Group_007
+    3300014: Group_008
+    3300016: Group_009
+    3300018: Group_010
+    3300020: Group_011
+    3300022: Group_012
+    3300024: Group_013
+    3300026: Group_014
+    3300028: Phone_final_top_Plane.014_001
+    3300030: Telephone_receiver_highpoly_right_Sphere.001_001
+    4300000: Group_001
+    4300002: Group_002
+    4300004: Group_003
+    4300006: Group_004
+    4300008: Group_005
+    4300010: Group_006
+    4300012: Group_007
+    4300014: Telephone_receiver_highpoly_right_Sphere.001_001
+    4300016: Group_008
+    4300018: Group_009
+    4300020: Group_010
+    4300022: Group_011
+    4300024: Phone_final_top_Plane.014_001
+    4300026: Group_012
+    4300028: Group_013
+    4300030: Group_014
+    6400000: Group_001
+    6400002: Group_002
+    6400004: Group_003
+    6400006: Group_004
+    6400008: Group_005
+    6400010: Group_006
+    6400012: Group_007
+    6400014: Group_008
+    6400016: Group_009
+    6400018: Group_010
+    6400020: Group_011
+    6400022: Group_012
+    6400024: Group_013
+    6400026: Group_014
+    6400028: Phone_final_top_Plane.014_001
+    6400030: Telephone_receiver_highpoly_right_Sphere.001_001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01ClockDetail
+    second: {fileID: 2100000, guid: 923dc30e8d7bc964b9956fc48c58ae0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01PaintingEdge
+    second: {fileID: 2100000, guid: cb808176ad36b6d468d53b59eb6261d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02Telephone Detail
+    second: {fileID: 2100000, guid: 5059c2aa7cd89db4d952ca2e72662602, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BambooBlind05
+    second: {fileID: 2100000, guid: 78dface43d589ec4cb3639ac10c7d7b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Free Passage08
+    second: {fileID: 2100000, guid: 6f2a8a3fdacd1834c8c620ea61c7f8f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tapertry02
+    second: {fileID: 2100000, guid: 5de640badeb25864d9d791db416bf5a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallRedChecks01
+    second: {fileID: 2100000, guid: e392b07d5e558184a9f30e6a31859a35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skp_front_default
+    second: {fileID: 2100000, guid: 8156727b8c0d29544871ead886e9461c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

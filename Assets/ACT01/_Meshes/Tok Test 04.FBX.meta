@@ -1,0 +1,171 @@
+fileFormatVersion: 2
+guid: 09e00bd6634e9b7498964416b2f0a375
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Circle.000_Circle.003_001
+    100002: Circle.000_Circle.003_002
+    100004: Circle.000_Circle.003_003
+    100006: Circle.001_001
+    100008: Circle.001_002
+    100010: Circle.001_003
+    100012: Group_001
+    100014: Group_002
+    100016: //RootNode
+    400000: Circle.000_Circle.003_001
+    400002: Circle.000_Circle.003_002
+    400004: Circle.000_Circle.003_003
+    400006: Circle.001_001
+    400008: Circle.001_002
+    400010: Circle.001_003
+    400012: Group_001
+    400014: Group_002
+    400016: //RootNode
+    2100000: ground_desertSandSmallDunes_1k_alb
+    2100002: ColgateComposite3b
+    2100004: ColgateComposite2
+    2100006: ColgateComposite3
+    2100008: skp_front_default
+    2100010: ColgateCap
+    2300000: Circle.000_Circle.003_001
+    2300002: Circle.000_Circle.003_002
+    2300004: Circle.000_Circle.003_003
+    2300006: Circle.001_001
+    2300008: Circle.001_002
+    2300010: Circle.001_003
+    2300012: Group_001
+    2300014: Group_002
+    3300000: Circle.000_Circle.003_001
+    3300002: Circle.000_Circle.003_002
+    3300004: Circle.000_Circle.003_003
+    3300006: Circle.001_001
+    3300008: Circle.001_002
+    3300010: Circle.001_003
+    3300012: Group_001
+    3300014: Group_002
+    4300000: Group_001
+    4300002: Circle.001_001
+    4300004: Circle.000_Circle.003_001
+    4300006: Circle.000_Circle.003_002
+    4300008: Circle.001_002
+    4300010: Group_002
+    4300012: Circle.001_003
+    4300014: Circle.000_Circle.003_003
+    6400000: Circle.000_Circle.003_001
+    6400002: Circle.000_Circle.003_002
+    6400004: Circle.000_Circle.003_003
+    6400006: Circle.001_001
+    6400008: Circle.001_002
+    6400010: Circle.001_003
+    6400012: Group_001
+    6400014: Group_002
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ColgateCap
+    second: {fileID: 2100000, guid: 47093401094a1fb44b3959b626fafcb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ColgateComposite2
+    second: {fileID: 2100000, guid: 6ce05cb841c2295498e3416e8acdc903, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ColgateComposite3
+    second: {fileID: 2100000, guid: cda2c66a01ebb6f429317c504d13b76e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ColgateComposite3b
+    second: {fileID: 2100000, guid: 7bb911961b0666646a422d43bf9afa6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ground_desertSandSmallDunes_1k_alb
+    second: {fileID: 2100000, guid: 8fc16472a23a7294a8b4bbabe7763e58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skp_front_default
+    second: {fileID: 2100000, guid: 8156727b8c0d29544871ead886e9461c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

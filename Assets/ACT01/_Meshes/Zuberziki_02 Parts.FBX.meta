@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: f9d814687a8f0e644a4df01206939b8d
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Component#10_001
+    100002: Component#10_002
+    100004: Component#4_001
+    100006: Group_001
+    100008: Group_002
+    100010: Group_003
+    100012: Group_004
+    100014: Group_005
+    100016: Group_006
+    100018: Group_007
+    100020: //RootNode
+    400000: Component#10_001
+    400002: Component#10_002
+    400004: Component#4_001
+    400006: Group_001
+    400008: Group_002
+    400010: Group_003
+    400012: Group_004
+    400014: Group_005
+    400016: Group_006
+    400018: Group_007
+    400020: //RootNode
+    2100000: Deep_RedPlaster_02
+    2100002: DeepRedPlaster
+    2100004: RedPaintedWallD
+    2100006: Yellow_Plaster00
+    2100008: GreenAqusPlaster
+    2100010: Yellow_Plaster03
+    2100012: skp_front_default
+    2100014: 00Detail02
+    2100016: StolenWood
+    2300000: Component#10_001
+    2300002: Component#10_002
+    2300004: Component#4_001
+    2300006: Group_001
+    2300008: Group_002
+    2300010: Group_003
+    2300012: Group_004
+    2300014: Group_005
+    2300016: Group_006
+    2300018: Group_007
+    3300000: Component#10_001
+    3300002: Component#10_002
+    3300004: Component#4_001
+    3300006: Group_001
+    3300008: Group_002
+    3300010: Group_003
+    3300012: Group_004
+    3300014: Group_005
+    3300016: Group_006
+    3300018: Group_007
+    4300000: Group_001
+    4300002: Group_002
+    4300004: Group_003
+    4300006: Group_004
+    4300008: Group_005
+    4300010: Group_006
+    4300012: Group_007
+    4300014: Component#4_001
+    4300016: Component#10_001
+    4300018: Component#10_002
+    6400000: Component#10_001
+    6400002: Component#10_002
+    6400004: Component#4_001
+    6400006: Group_001
+    6400008: Group_002
+    6400010: Group_003
+    6400012: Group_004
+    6400014: Group_005
+    6400016: Group_006
+    6400018: Group_007
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 00Detail02
+    second: {fileID: 2100000, guid: 1c508760b5ba3a0479dfdaa144a8d916, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DeepRedPlaster
+    second: {fileID: 2100000, guid: 3d976b8008347e342b7579a0a07870ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Deep_RedPlaster_02
+    second: {fileID: 2100000, guid: 8e411d8c9f229804fa596ec617a9b09a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GreenAqusPlaster
+    second: {fileID: 2100000, guid: 5eb8f9e829334e444b52ab4b5d7b457b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RedPaintedWallD
+    second: {fileID: 2100000, guid: 02b3165194063d24caf70f9e28c468dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StolenWood
+    second: {fileID: 2100000, guid: d7cd9371ee2d7554d892efa231b94dd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow_Plaster00
+    second: {fileID: 2100000, guid: 8753c1dfcfdf7d649a7e4bcab62be01b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow_Plaster03
+    second: {fileID: 2100000, guid: 01cafc835fe729f488eee98699a37e66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skp_front_default
+    second: {fileID: 2100000, guid: 8156727b8c0d29544871ead886e9461c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1.1
+    meshCompression: 0
+    addColliders: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
